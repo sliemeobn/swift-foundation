@@ -311,6 +311,12 @@ let package = Package(
             dependencies: [
                 .target(name: "NewCodable"),
             ]
-        )
+        ),
+        .executableTarget(
+            name: "NewCodableEmbeddedCrasher",
+            dependencies: [
+                .target(name: "NewCodable")
+            ]
+        ),
     ]
 )
